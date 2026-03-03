@@ -1,4 +1,5 @@
 import os
+import sys
 from datetime import datetime
 
 LOG_FILE = "daily_log.md"
@@ -57,10 +58,20 @@ def add_entry(date, problem, topic):
         f.writelines(new_lines)
 
 
+def is_interactive():
+    return sys.stdin.isatty()
+
+
 def main():
     ensure_log_file()
 
     print("\n📘 Daily DSA Logger\n")
+
+    if not is_interactive():
+        # Running from git hook — no stdin available, skip logging
+        print("⚠️  Non-interactive mode detected (git hook). Skipping DSA entry.\n")
+        print("💡 Run `python log.py` manually to log today's problem.")
+        return
 
     # DATE INPUT
     use_today = input("Use today's date? (y/n): ").strip().lower()
@@ -68,11 +79,15 @@ def main():
         date = get_today_date()
     else:
         print("Enter date in format: DD Month YYYY (e.g., 03 March 2026)")
-        date = input("Date: ")
+        date = input("Date: ").strip()
 
     # PROBLEM INPUT
     problem = input("Enter problem name: ").strip()
     topic = input("Enter topic (Array/DP/Graph...): ").strip()
+
+    if not problem or not topic:
+        print("❌ Problem name and topic cannot be empty.")
+        return
 
     add_entry(date, problem, topic)
 
