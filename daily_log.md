@@ -17,4 +17,5 @@ Track your daily problem-solving journey here 🚀
 - Problem Name (Topic)
 
 ## 📅 03 March 2026
+- remove duplicates (Array)
 - testing (test)
