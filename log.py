@@ -100,8 +100,9 @@ def main():
 
     print("\n✅ daily_log.md updated!")
 
-    # Auto add log file
+    # Commit the log entry so it's included in the push
     os.system("git add daily_log.md")
+    os.system('git commit -m "📘 DSA log: {}" --no-verify'.format(f"{problem} ({topic})"))
 
 
 if __name__ == "__main__":
