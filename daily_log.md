@@ -22,3 +22,6 @@ Track your daily problem-solving journey here 🚀
 
 ## 📅 04 March 2026
 - test (test)
+
+## 📅 05 March 2026
+- two sum (array)
