@@ -25,3 +25,6 @@ Track your daily problem-solving journey here 🚀
 
 ## 📅 05 March 2026
 - two sum (array)
+
+## 📅 06 March 2026
+- First Unique Char (String)
