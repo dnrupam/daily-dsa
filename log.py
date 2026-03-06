@@ -80,6 +80,12 @@ def main():
 
     print("\n📘 Daily DSA Logger\n")
 
+    skip = prompt(tty, "Log a DSA problem? (y/n): ")
+    if skip.lower() != "y":
+        print("⏭️  Skipping DSA log. Pushing as-is...")
+        tty.close()
+        sys.exit(0)
+
     use_today = prompt(tty, "Use today's date? (y/n): ")
     if use_today.lower() == "y":
         date = get_today_date()
