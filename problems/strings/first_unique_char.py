@@ -28,7 +28,22 @@ class Solution:
                 return s.index(key)
         return -1
         
+obj = Solution()
+print(obj.firstUniqChar('leetcode'))
 
+# time complexity is o(n2)
 
+# more optimized
+
+class Solution:
+    def firstUniqChar(self, s):
+        d = {}
+        for char in s:
+            d[char] = d.get(char, 0) + 1  # {a:2, b:2}
+        for i, char in  enumerate(d): # {0:a, 1:b}
+            if d[char] == 1: 
+                return i
+        return -1
+            
 obj = Solution()
 print(obj.firstUniqChar('aabb'))

@@ -8,7 +8,7 @@
 # Input: nums = [1, 2, 3, 4]
 # Output: false
 
-class RemoveDuplicates:
+class ContainsDuplicate:
     def function_name(self, nums):
         lst = {}
         for num in nums:
@@ -19,9 +19,22 @@ class RemoveDuplicates:
                 return True
         return False
 
-obj = RemoveDuplicates()
+obj = ContainsDuplicate()
 print(obj.function_name([1, 2, 3, 4, 3, 5, 5]))
 
 
 # time and space complexity: o(n) & o(n)
 # pattern used: hashmap
+
+
+class ContainsDuplicate:
+    def function_name(self, nums):
+        seen = set()
+        for num in nums:
+            if num in seen:
+                return True
+            seen.add(num)
+        return False
+
+obj = ContainsDuplicate()
+print(obj.function_name([1, 2, 3, 4,4]))
