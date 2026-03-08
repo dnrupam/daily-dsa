@@ -28,3 +28,6 @@ Track your daily problem-solving journey here 🚀
 
 ## 📅 06 March 2026
 - First Unique Char (String)
+
+## 📅 07 March 2026
+- palindrome & remove duplicates (string)
