@@ -6,5 +6,8 @@ class Solution:
             if nums[i] != nums[i-1]:
                 nums[j] = nums[i]
                 j += 1
-        
+            
         return j
+
+obj = Solution()
+print(obj.removeDuplicates([0,0,1,1]))
