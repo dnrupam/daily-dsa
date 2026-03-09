@@ -31,3 +31,6 @@ Track your daily problem-solving journey here 🚀
 
 ## 📅 07 March 2026
 - palindrome & remove duplicates (string)
+
+## 📅 09 March 2026
+- remove element (array)
