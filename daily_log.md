@@ -34,3 +34,6 @@ Track your daily problem-solving journey here 🚀
 
 ## 📅 09 March 2026
 - remove element (array)
+
+## 📅 10 March 2026
+- valid anagram (string)
