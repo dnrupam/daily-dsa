@@ -36,4 +36,5 @@ Track your daily problem-solving journey here 🚀
 - remove element (array)
 
 ## 📅 10 March 2026
+- move zeroes (array)
 - valid anagram (string)
