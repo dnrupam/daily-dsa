@@ -6,7 +6,7 @@ class Solution:
             if nums[i] != nums[i-1]:
                 nums[j] = nums[i]
                 j += 1
-            
+        print(nums)
         return j
 
 obj = Solution()

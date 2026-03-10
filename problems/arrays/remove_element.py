@@ -1,5 +1,5 @@
-nums = [3,2,2,3]
-val = 3
+nums = [0,1,0,3,12]
+val = 0
 
 def removeElement(nums, val):
     n = len(nums)
