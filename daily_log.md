@@ -38,3 +38,6 @@ Track your daily problem-solving journey here 🚀
 ## 📅 10 March 2026
 - move zeroes (array)
 - valid anagram (string)
+
+## 📅 12 March 2026
+- find diff & single number (arr, str)
