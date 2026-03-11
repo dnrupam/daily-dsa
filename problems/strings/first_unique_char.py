@@ -35,15 +35,49 @@ print(obj.firstUniqChar('leetcode'))
 
 # more optimized
 
-class Solution:
+class Solution2:
     def firstUniqChar(self, s):
         d = {}
+        
         for char in s:
             d[char] = d.get(char, 0) + 1  # {a:2, b:2}
-        for i, char in  enumerate(d): # {0:a, 1:b}
+        
+        print(d)
+        for i, char in  enumerate(s): # {0:a, 1:b}
             if d[char] == 1: 
                 return i
         return -1
             
-obj = Solution()
-print(obj.firstUniqChar('aabb'))
+obj = Solution2()
+print(obj.firstUniqChar('dddccdbba'))
+
+
+from collections import Counter
+
+class Solution3:
+    def firstUniqChar(self, s: str) -> int:
+        """
+        Find the first non-repeating character in a string and return its index.
+        If it doesn't exist, return -1.
+      
+        Args:
+            s: Input string to search for first unique character
+          
+        Returns:
+            Index of first unique character, or -1 if none exists
+        """
+        # Count frequency of each character in the string
+        char_count = Counter(s)
+        print(char_count)
+        # Iterate through string to find first character with count of 1
+        for index, char in enumerate(s):
+            print(index, char)
+            if char_count[char] == 1:
+                return index
+      
+        # No unique character found
+        return -1
+
+
+obj = Solution3()
+print(obj.firstUniqChar('dddccdbba'))
