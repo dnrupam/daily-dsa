@@ -40,4 +40,5 @@ Track your daily problem-solving journey here 🚀
 - valid anagram (string)
 
 ## 📅 12 March 2026
+- reverse a string (string)
 - find diff & single number (arr, str)
